@@ -47,7 +47,11 @@ const MultiStepProgressBar = (props) => {
     'Runs long',
   ];
 
-  console.log('multiprogress', props.value);
+  console.log('multiprogress', props);
+
+  const markerPosition = (props.value - 1) * 25;
+  const markerColor = '#f5005a';
+  const labels = selections[props.characteristic];
 
   return (
     <div>
@@ -55,32 +59,37 @@ const MultiStepProgressBar = (props) => {
         <div
           className="multiProgressSegment"
           style={{ marginRight: `${5}px` }}
-        >
-          {props.value <= (5 / 3) ? <FontAwesomeIcon icon={carrot} /> : null}
-        </div>
+        />
         <div
           className="multiProgressSegment"
           style={{ marginRight: `${5}px` }}
+        />
+        <div className="multiProgressSegment" />
+        <div
+          className="triangle"
+          style={{ left: `${markerPosition}%` }}
+        />
+      </div>
+      <div className="bar-labels">
+        <div
+          className="bar-label1"
+          style={{ textAlign: 'left' }}
         >
-          {props.value <= (10 / 3) && props.value > (5 / 3)
-            ? <FontAwesomeIcon icon={carrot} /> : null}
+          {labels[0]}
         </div>
-        <div className="multiProgressSegment">
-          {props.value <= (15 / 3) && props.value > (10 / 3)
-            ? <FontAwesomeIcon icon={carrot} /> : null}
+        <div
+          className="bar-label2"
+          style={{ textAlign: 'center' }}
+        >
+          {labels[2]}
+        </div>
+        <div
+          className="bar-label3"
+          style={{ textAlign: 'right' }}
+        >
+          {labels[4]}
         </div>
       </div>
-      {/* <div>
-        <span>
-          {selection[props.char][0]}
-        </span>
-        <span>
-          {selection[props.char][2]}
-        </span>
-        <span>
-          {selection[props.char][4]}
-        </span>
-      </div> */}
     </div>
 
   );

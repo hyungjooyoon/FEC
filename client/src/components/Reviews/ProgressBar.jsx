@@ -9,7 +9,7 @@ const ProgressBar = (props) => (
         <div
           data={props.percent}
           className="progress"
-          style={{ width: props.percent + '%' }}
+          style={{ width: `${props.percent}%` }}
         />
       </div>
     </span>

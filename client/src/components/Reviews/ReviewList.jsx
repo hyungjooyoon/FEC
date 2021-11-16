@@ -61,7 +61,7 @@ class ReviewList extends React.Component {
 
   render() {
     return (
-      <div className="reviewList">
+      <div className="review-list">
         <div>
           <span>
             {this.state.reviews.results.length}

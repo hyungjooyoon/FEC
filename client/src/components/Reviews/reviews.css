@@ -58,3 +58,23 @@ input[type="radio"] {
 .react-textselect.bright::after {
   border-top: 0.33em solid rgba(255, 255, 255, 0.33);
 }
+.multiProgressContainer {
+  display: flex;
+  position: relative;
+}
+.multiProgressSegment {
+  width: 33%;
+  height: 10px;
+  background: lightgrey;
+  border-color: black;
+  margin: 1%;
+}
+.triangle {
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 12px solid;
+  position: absolute;
+  margin: 1%;
+  z-index: 1;
+}

@@ -33,7 +33,7 @@ class ReviewTile extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="review-tile">
         <Rating
           initialRating={this.props.review.rating}
           fractions={4}

@@ -31,9 +31,10 @@ class MetaData extends React.Component {
       );
     }
     return (
-      <div className="metadata">
+      <div className="sidebar">
         <div className="metadata-content">
-          <span>{this.state.avgRating}{' '}</span>
+          <div id="title">Ratings &amp; Reviews</div>
+          <span>{this.state.avgRating.toFixed(2)}{' '}</span>
           <Rating
             initialRating={this.state.avgRating.toFixed(2)}
             fractions={4}
