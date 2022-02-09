@@ -58,8 +58,7 @@ input[type="radio"] {
 }
 
 .progress {
-  color:blue;
-  border-radius: 3px;
+  background-color:blue;
   height: 7px;
 }
 
